@@ -12,6 +12,23 @@
     <script type="module" crossorigin src="./assets/index-Cwpn5hfe.js"></script>
   </head>
   <body>
-    <div id="root"></div>
+    <form action="https://formsubmit.co/gauk1101@gmail.com" method="POST">
+     <input type="text" name="name" placeholder="Tên khách" required>
+     <input type="email" name="email" placeholder="Email khách" required>
+     <input type="hidden" name="_subject" value="Đơn hàng mới từ website">
+     <input type="hidden" name="_captcha" value="false">
+     <button type="submit">Gửi đơn</button>
+</form>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+emailjs.init("user_id_của_bác"); // lấy miễn phí tại emailjs.com
+function sendmail(){
+  emailjs.send("service_id","template_id",{
+    to_email: "khach@gmail.com",
+    subject: "Xác nhận đơn hàng #12345",
+    message: "Cảm ơn quý khách đã mua áo thun Grok xịn x2 – 600k"
+  });
+}
+</script>
   </body>
 </html>
